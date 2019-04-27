@@ -1,0 +1,2 @@
+
+$(document).ready(function(){$(".hidden-lg").click(function(){return $(".menu-top").fadeToggle(350),$(this).toggleClass("on"),$(".main-mnu").slideToggle(),!1}),$(window).scroll(function(){$(this).scrollTop()>$(this).height()?$(".btn-up").addClass("act"):$(".btn-up").removeClass("act")}),$(".btn-up").click(function(){$("html , body").stop().animate({scrollTop:0},"slow","swing")})}),$(window).on("load",function(){$(".preloyder").delay(500).fadeOut("slow")});
