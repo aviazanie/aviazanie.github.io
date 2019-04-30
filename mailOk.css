@@ -4,7 +4,8 @@
 }
 .mailOk-wrap{
   position: relative;
-  background: 50% 50% no-repeat/cover;
+  background-repeat:  no-repeat;
+  background-size: cover;
   z-index:1;
 }
 .ok{
