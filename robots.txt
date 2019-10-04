@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: //klubok.dp.ua/sitemap.xml
+Sitemap: https://klubok.dp.ua/sitemap%20.xml
 Host: klubok.dp.ua
