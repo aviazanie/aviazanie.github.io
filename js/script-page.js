@@ -1,1 +1,53 @@
-$(document).ready(function(){$(".hidden-lg").click(function(){return $(".menu-top").fadeToggle(350),$(this).toggleClass("on"),$(".main-mnu").slideToggle(),!1}),$(window).scroll(function(){$(this).scrollTop()>$(this).height()?$(".btn-up").addClass("act"):$(".btn-up").removeClass("act")}),$(".btn-up").click(function(){$("html , body").stop().animate({scrollTop:0},"slow","swing")});var n=$(".post-wrap"),o=n.toArray().length,t=0;n.slice(7,o).hide(),$("#post-btn").on("click",function(){(t+=7)<o?n.slice(t,t+7).fadeIn(500):(alert("Каталог закончен !"),$(this).fadeIn(500))})}),$(window).on("load",function(){$(".preloyder").delay(500).fadeOut("slow")});
+$(document).ready(function(){
+
+  $(".hidden-lg").click(function() {
+    $('.menu-top').fadeToggle(350);
+    $(this).toggleClass("on");
+    $(".main-mnu").slideToggle();
+    return false;
+  });
+//  -----button top  ������ ������----------------
+$(window).scroll(function(){
+  if ($(this).scrollTop() > $(this).height())
+  {
+    $(".btn-up").addClass("act");
+  }else{
+    $(".btn-up").removeClass("act");
+  }
+});
+$('.btn-up').click(function(){
+  $('html , body').stop().animate({scrollTop:0},'slow','swing');
+});
+
+
+//      panginator blog    
+
+var vh = (window.pageYOffset + innerHeight);
+var d =$('.post-wrap');
+var n = 7;
+var m = d.toArray().length;
+var x = 0;
+
+d.slice(n,m).hide();
+$('#post-btn').on('click',function(){
+  var h = (window.pageYOffset + innerHeight);
+       x += n; 
+    if(x < m){
+        d.slice(x,x+n).fadeIn(500);
+        $('html , body').stop().animate({scrollTop: h - vh},'slow','swing');
+    }else{
+      alert('Каталог закончен !')
+      $(this).fadeIn(500);
+    }
+});
+
+// ------------------archive-------------
+
+
+
+
+});
+//-------------------��������� ����� ---------------
+$(window).on('load',function(){
+  $(".preloyder").delay(500).fadeOut("slow");
+})
