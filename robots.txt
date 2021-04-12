@@ -1,4 +1,9 @@
 User-agent: *
-Allow: /
+
+Disallow: /about
+Disallow: /about-ua
+Disallow: /tags/
+
 Sitemap: https://klubok.dp.ua/sitemap.xml
-Host: klubok.dp.ua
+
+Host: https://klubok.dp.ua
